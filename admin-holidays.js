@@ -29,17 +29,35 @@ function renderHolidaysManagement() {
       </div>
     </div>
     
-    <div class="mb-6">
-      <h5 class="text-md font-semibold mb-3 text-gray-700 dark:text-gray-300">추가 공휴일 등록</h5>
-      <div class="flex gap-2 mb-3">
-        <input type="date" id="customHolidayDate" class="form-input flex-1">
-        <input type="text" id="customHolidayName" placeholder="공휴일 이름" class="form-input flex-1">
-        <select id="customHolidayType" class="form-select w-32">
-          <option value="company">기업휴일</option>
-          <option value="national">국가공휴일</option>
-        </select>
-        <button id="addCustomHolidayButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg interactive-button">
-          <i class="fas fa-plus"></i> 추가
+    <div class="mb-6 bg-gradient-to-br from-white to-gray-50 dark:from-slate-800 dark:to-slate-900 rounded-xl p-5 border border-gray-200 dark:border-slate-700 shadow-sm">
+      <h5 class="text-md font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+        <i class="fas fa-calendar-plus text-luxury-gold-500 mr-2"></i>
+        추가 공휴일 등록
+      </h5>
+      <div class="space-y-4">
+        <div>
+          <label for="customHolidayDate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+            <i class="far fa-calendar-alt mr-1.5 text-luxury-navy-500 dark:text-luxury-gold-400"></i>날짜
+          </label>
+          <input type="date" id="customHolidayDate" class="form-input block w-full px-4 py-2.5 bg-white dark:bg-slate-800">
+        </div>
+        <div>
+          <label for="customHolidayName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+            <i class="fas fa-tag mr-1.5 text-luxury-navy-500 dark:text-luxury-gold-400"></i>공휴일 이름
+          </label>
+          <input type="text" id="customHolidayName" placeholder="예: 창립기념일" class="form-input block w-full px-4 py-2.5 bg-white dark:bg-slate-800">
+        </div>
+        <div>
+          <label for="customHolidayType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+            <i class="fas fa-layer-group mr-1.5 text-luxury-navy-500 dark:text-luxury-gold-400"></i>유형
+          </label>
+          <select id="customHolidayType" class="form-select block w-full px-4 py-2.5 bg-white dark:bg-slate-800">
+            <option value="company">🏢 기업휴일</option>
+            <option value="national">🇰🇷 국가공휴일</option>
+          </select>
+        </div>
+        <button id="addCustomHolidayButton" class="w-full mt-2 bg-gradient-to-r from-luxury-navy-700 to-luxury-navy-800 hover:from-luxury-navy-800 hover:to-luxury-navy-900 text-white font-semibold py-3 px-4 rounded-xl interactive-button shadow-md border border-luxury-gold-500/20 transition-all duration-300">
+          <i class="fas fa-plus-circle mr-2"></i> 공휴일 등록하기
         </button>
       </div>
     </div>
