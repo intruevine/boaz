@@ -8,6 +8,8 @@ if (-not (Test-Path "deploy/index.html")) {
 
 Write-Host "OK: Files ready" -ForegroundColor Green
 Write-Host "  - deploy/index.html" -ForegroundColor Gray
+Write-Host "  - deploy/holidays.js" -ForegroundColor Gray
+Write-Host "  - deploy/admin-holidays.js" -ForegroundColor Gray
 Write-Host "  - deploy/image/logo.jpg" -ForegroundColor Gray
 
 Write-Host "`nUploading via FTP..." -ForegroundColor Yellow
@@ -17,6 +19,16 @@ try {
     curl.exe --user "boazkim:R@kaf_427" --ftp-skip-pasv-ip -T deploy/index.html ftp://intruevine.dscloud.biz/web_packages/CSR/index.html 2>&1 | Out-Null
     if ($LASTEXITCODE -eq 0) { Write-Host "  SUCCESS: index.html" -ForegroundColor Green }
     else { Write-Host "  FAILED: index.html" -ForegroundColor Red }
+    
+    Write-Host "  Uploading holidays.js..." -ForegroundColor Gray
+    curl.exe --user "boazkim:R@kaf_427" --ftp-skip-pasv-ip -T deploy/holidays.js ftp://intruevine.dscloud.biz/web_packages/CSR/holidays.js 2>&1 | Out-Null
+    if ($LASTEXITCODE -eq 0) { Write-Host "  SUCCESS: holidays.js" -ForegroundColor Green }
+    else { Write-Host "  FAILED: holidays.js" -ForegroundColor Red }
+    
+    Write-Host "  Uploading admin-holidays.js..." -ForegroundColor Gray
+    curl.exe --user "boazkim:R@kaf_427" --ftp-skip-pasv-ip -T deploy/admin-holidays.js ftp://intruevine.dscloud.biz/web_packages/CSR/admin-holidays.js 2>&1 | Out-Null
+    if ($LASTEXITCODE -eq 0) { Write-Host "  SUCCESS: admin-holidays.js" -ForegroundColor Green }
+    else { Write-Host "  FAILED: admin-holidays.js" -ForegroundColor Red }
     
     Write-Host "  Uploading logo.jpg..." -ForegroundColor Gray
     curl.exe --user "boazkim:R@kaf_427" --ftp-skip-pasv-ip -T deploy/image/logo.jpg ftp://intruevine.dscloud.biz/web_packages/CSR/image/logo.jpg 2>&1 | Out-Null
