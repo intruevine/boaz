@@ -48,8 +48,9 @@ function renderHolidaysManagement() {
           <input type="text" id="customHolidayName" placeholder="예: 창립기념일" class="form-input block w-full px-4 py-2.5 bg-white dark:bg-slate-800">
         </div>
         <div>
-          <label for="customHolidayType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-            <i class="fas fa-layer-group mr-1.5 text-luxury-navy-500 dark:text-luxury-gold-400"></i>유형
+          <label for="customHolidayType" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1.5">
+            <i class="fas fa-layer-group mr-1.5 text-luxury-navy-500 dark:text-luxury-gold-400"></i>
+            <span class="text-gray-700 dark:text-gray-200">유형</span>
           </label>
           <select id="customHolidayType" class="form-select block w-full px-4 py-2.5 bg-white dark:bg-slate-800">
             <option value="company">🏢 기업휴일</option>
