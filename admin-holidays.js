@@ -57,7 +57,7 @@ function renderHolidaysManagement() {
             <option value="national">🇰🇷 국가공휴일</option>
           </select>
         </div>
-        <button id="addCustomHolidayButton" class="w-full mt-2 bg-gradient-to-r from-luxury-navy-700 to-luxury-navy-800 hover:from-luxury-navy-800 hover:to-luxury-navy-900 text-white font-semibold py-3 px-4 rounded-xl interactive-button shadow-md border border-luxury-gold-500/20 transition-all duration-300">
+        <button id="addCustomHolidayButton" class="w-full mt-2 text-white font-semibold py-3 px-4 rounded-xl interactive-button shadow-md transition-all duration-300" style="background: linear-gradient(135deg, #334e68, #243b53); border: 1px solid rgba(212, 175, 55, 0.2);">
           <i class="fas fa-plus-circle mr-2"></i> 공휴일 등록하기
         </button>
       </div>
