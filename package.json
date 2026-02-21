@@ -1,0 +1,60 @@
+{
+  "name": "inturevine",
+  "version": "2.0.0",
+  "description": "고객지원 현황 관리 시스템",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && npm run build:css",
+    "build:css": "node node_modules/tailwindcss/lib/cli.js -i ./src/styles/input.css -o ./dist/styles.css --minify",
+    "watch": "tsc --watch",
+    "watch:css": "node node_modules/tailwindcss/lib/cli.js -i ./src/styles/input.css -o ./dist/styles.css --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,json,css,md}\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "concurrently \"npm run watch\" \"npm run watch:css\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "dependencies": {
+    "firebase": "^10.10.0",
+    "zod": "^3.22.4",
+    "zustand": "^4.5.2",
+    "idb": "^8.0.0",
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5",
+    "concurrently": "^8.2.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 사용자 인증 확인 헬퍼 함수
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // 현재 사용자 ID 확인
+    function isUser(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 관리자 확인
+    function isAdmin() {
+      return isAuthenticated() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // 활성 사용자 확인
+    function isActiveUser() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.status == 'active';
+    }
+
+    // 사용자 컬렉션
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isUser(userId);
+      allow update: if isUser(userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // 작업 로그 컬렉션
+    match /work_logs/{logId} {
+      allow read: if isAuthenticated() && isActiveUser();
+      allow create: if isAuthenticated() && isActiveUser() && 
+        request.resource.data.submittedBy == request.auth.uid;
+      allow update: if isAuthenticated() && isActiveUser() &&
+        (resource.data.submittedBy == request.auth.uid || isAdmin());
+      allow delete: if isAuthenticated() && isActiveUser() &&
+        (resource.data.submittedBy == request.auth.uid || isAdmin());
+    }
+
+    // 설정 컬렉션
+    match /settings/{document} {
+      allow read: if isAuthenticated() && isActiveUser();
+      allow write: if isAdmin();
+    }
+
+    // 사용자 템플릿 컬렉션
+    match /users/{userId}/templates/{templateId} {
+      allow read: if isUser(userId) || isAdmin();
+      allow write: if isUser(userId) || isAdmin();
+    }
+  }
+}
