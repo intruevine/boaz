@@ -1,0 +1,9 @@
+boazkim
+ThinQ2@22
+cd /CSR
+binary
+put deploy/index.html
+mkdir image
+cd image
+put deploy/image/logo.jpg
+bye

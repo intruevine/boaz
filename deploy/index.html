@@ -584,69 +584,68 @@
         pointer-events: none;
       }
 
-      /* Ultra Premium Minimal KPI Cards */
+      /* Clean & Intuitive KPI Cards */
       .dashboard-kpi-card {
         position: relative;
-        overflow: hidden;
-        border-radius: 16px;
+        border-radius: 12px;
         background: #ffffff;
-        border: 1px solid rgba(16, 42, 67, 0.06);
-        box-shadow: 0 1px 3px rgba(16, 42, 67, 0.04);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(16, 42, 67, 0.08);
+        box-shadow: 0 2px 8px rgba(16, 42, 67, 0.06);
+        transition: all 0.2s ease;
         padding: 1.5rem;
       }
 
       .dashboard-kpi-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px -8px rgba(16, 42, 67, 0.12);
-        border-color: rgba(16, 42, 67, 0.1);
+        box-shadow: 0 8px 24px -4px rgba(16, 42, 67, 0.12);
+        border-color: rgba(16, 42, 67, 0.12);
       }
 
       html.dark .dashboard-kpi-card {
-        background: rgba(16, 24, 40, 0.6);
-        border-color: rgba(255, 255, 255, 0.05);
+        background: rgba(16, 24, 40, 0.8);
+        border-color: rgba(255, 255, 255, 0.08);
       }
 
       html.dark .dashboard-kpi-card:hover {
-        border-color: rgba(212, 175, 55, 0.15);
-        box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.3);
+        border-color: rgba(212, 175, 55, 0.2);
+        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
       }
 
-      /* KPI Card Header with Icon and Change Badge */
+      /* KPI Card Header with Icon */
       .dashboard-kpi-header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
       }
 
       .dashboard-kpi-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
 
       .dashboard-kpi-icon.navy {
-        background: rgba(16, 42, 67, 0.08);
+        background: rgba(16, 42, 67, 0.1);
         color: var(--luxury-navy-700);
       }
 
       .dashboard-kpi-icon.gold {
-        background: rgba(212, 175, 55, 0.12);
+        background: rgba(212, 175, 55, 0.15);
         color: var(--luxury-gold-600);
       }
 
       .dashboard-kpi-icon.teal {
-        background: rgba(13, 148, 136, 0.08);
+        background: rgba(13, 148, 136, 0.1);
         color: #0d9488;
       }
 
       .dashboard-kpi-icon.rose {
-        background: rgba(225, 29, 72, 0.08);
+        background: rgba(225, 29, 72, 0.1);
         color: #e11d48;
       }
 
@@ -676,30 +675,25 @@
         color: #64748b;
       }
 
-      /* KPI Label */
+      /* KPI Label - Clean Style */
       .dashboard-kpi-label {
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 500;
         color: var(--luxury-navy-500);
-        margin-bottom: 0.5rem;
-        letter-spacing: -0.01em;
+        margin-bottom: 0.375rem;
       }
 
       html.dark .dashboard-kpi-label {
         color: var(--luxury-navy-400);
       }
 
-      /* KPI Value */
+      /* KPI Value - Clean Style */
       .dashboard-kpi-value {
-        font-size: 2rem;
+        font-size: 1.75rem;
         line-height: 1.2;
         font-weight: 600;
         color: var(--luxury-navy-900);
-        letter-spacing: -0.02em;
-        font-family:
-          'Pretendard',
-          -apple-system,
-          sans-serif;
+        letter-spacing: -0.01em;
       }
 
       .dashboard-kpi-value .unit {
@@ -715,56 +709,6 @@
 
       html.dark .dashboard-kpi-value .unit {
         color: var(--luxury-navy-400);
-      }
-
-      .dashboard-kpi-card:hover {
-        transform: translateY(-6px);
-        box-shadow:
-          var(--shadow-xl),
-          0 0 30px -10px rgba(212, 175, 55, 0.2);
-      }
-
-      html.dark .dashboard-kpi-card {
-        background: linear-gradient(145deg, rgba(16, 24, 40, 0.95) 0%, rgba(10, 15, 26, 0.9) 100%);
-        border-color: rgba(212, 175, 55, 0.2);
-      }
-
-      .dashboard-kpi-card::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, var(--luxury-gold-400), transparent);
-        opacity: 0.6;
-      }
-
-      .dashboard-kpi-label {
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--luxury-navy-500);
-        font-family: 'Playfair Display', serif;
-      }
-
-      html.dark .dashboard-kpi-label {
-        color: var(--luxury-navy-400);
-      }
-
-      .dashboard-kpi-value {
-        margin-top: 0.5rem;
-        font-size: 2.25rem;
-        line-height: 1;
-        font-weight: 300;
-        color: var(--luxury-navy-900);
-        letter-spacing: -0.03em;
-        font-family: 'Playfair Display', serif;
-      }
-
-      html.dark .dashboard-kpi-value {
-        color: #f8fafc;
       }
 
       /* Premium Chart Panel */
@@ -1031,7 +975,7 @@
           display: none;
         }
         .dashboard-kpi-value {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
         }
         .responsive-table thead {
           display: none;
@@ -1236,37 +1180,6 @@
         align-items: center;
         overflow: hidden;
         word-break: break-all;
-      }
-
-      /* Calendar Day Colors: Sunday=Red, Saturday=Blue */
-      .fc-day-sun .fc-daygrid-day-number,
-      .fc-day-sun .fc-col-header-cell-cushion {
-        color: #dc2626 !important;
-        font-weight: 600;
-      }
-
-      .fc-day-sat .fc-daygrid-day-number,
-      .fc-day-sat .fc-col-header-cell-cushion {
-        color: #2563eb !important;
-        font-weight: 600;
-      }
-
-      /* Holiday text color (red) - All holiday events */
-      .fc-event.holiday-event,
-      .fc-event.holiday-event .fc-event-main,
-      .fc-event.holiday-event .fc-event-title,
-      .fc-daygrid-event.holiday-event,
-      .fc-list-event.holiday-event {
-        color: #dc2626 !important;
-        font-weight: 700 !important;
-        background: transparent !important;
-        border-color: transparent !important;
-        box-shadow: none !important;
-      }
-
-      .fc-event.holiday-event .fc-event-main-frame {
-        color: #dc2626 !important;
-        font-weight: 700 !important;
       }
 
       /* Premium User Icon on Calendar */
@@ -1780,9 +1693,10 @@
         <div class="text-center mb-8">
           <div class="relative inline-block mb-6">
             <img
-              src="https://i.imgur.com/21d3e2k.png"
+              src="/image/logo.jpg"
               alt="Logo"
               class="h-20 w-auto app-logo mx-auto drop-shadow-lg"
+              onerror="this.src = 'https://i.imgur.com/21d3e2k.png'"
             />
             <div
               class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-transparent via-luxury-gold-400 to-transparent rounded-full"
@@ -2032,10 +1946,9 @@
           <div class="flex items-center gap-4 flex-shrink-0 min-w-0">
             <div class="relative">
               <img
-                src="/image/logo.jpg"
+                src="https://i.imgur.com/21d3e2k.png"
                 alt="Logo"
-                class="h-20 w-auto app-logo mx-auto drop-shadow-lg"
-                onerror="this.src = 'https://i.imgur.com/21d3e2k.png'"
+                class="h-11 w-auto app-logo drop-shadow-lg"
               />
               <div
                 class="absolute -bottom-1 -right-1 w-3 h-3 bg-luxury-gold-400 rounded-full border-2 border-white dark:border-slate-800 shadow-sm"
@@ -2558,8 +2471,6 @@
         </div>
       </div>
     </div>
-    <script src="holidays.js"></script>
-    <script src="admin-holidays.js"></script>
     <script type="module">
       // Firebase SDKs
       import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js';
@@ -2728,6 +2639,124 @@
       let announcementListenerUnsubscribe = null;
       let supportTypesListenerUnsubscribe = null;
       let recordsListenerUnsubscribe = null;
+
+      // Korean Holidays Data (2026-2030) - 공휴일 데이터
+      const KOREAN_HOLIDAYS = {
+        // 2026년
+        2026: [
+          { date: '2026-01-01', name: '신정', type: 'national' },
+          { date: '2026-02-16', name: '설날 연휴', type: 'national' },
+          { date: '2026-02-17', name: '설날', type: 'national' },
+          { date: '2026-02-18', name: '설날 연휴', type: 'national' },
+          { date: '2026-03-01', name: '삼일절', type: 'national' },
+          { date: '2026-05-05', name: '어린이날', type: 'national' },
+          { date: '2026-05-24', name: '부처님오신날', type: 'national' },
+          { date: '2026-06-06', name: '현충일', type: 'national' },
+          { date: '2026-08-15', name: '광복절', type: 'national' },
+          { date: '2026-09-24', name: '추석 연휴', type: 'national' },
+          { date: '2026-09-25', name: '추석', type: 'national' },
+          { date: '2026-09-26', name: '추석 연휴', type: 'national' },
+          { date: '2026-10-03', name: '개천절', type: 'national' },
+          { date: '2026-10-09', name: '한글날', type: 'national' },
+          { date: '2026-12-25', name: '성탄절', type: 'national' },
+        ],
+        // 2027년
+        2027: [
+          { date: '2027-01-01', name: '신정', type: 'national' },
+          { date: '2027-02-05', name: '설날 연휴', type: 'national' },
+          { date: '2027-02-06', name: '설날', type: 'national' },
+          { date: '2027-02-07', name: '설날 연휴', type: 'national' },
+          { date: '2027-03-01', name: '삼일절', type: 'national' },
+          { date: '2027-05-05', name: '어린이날', type: 'national' },
+          { date: '2027-05-13', name: '부처님오신날', type: 'national' },
+          { date: '2027-06-06', name: '현충일', type: 'national' },
+          { date: '2027-08-15', name: '광복절', type: 'national' },
+          { date: '2027-09-14', name: '추석 연휴', type: 'national' },
+          { date: '2027-09-15', name: '추석', type: 'national' },
+          { date: '2027-09-16', name: '추석 연휴', type: 'national' },
+          { date: '2027-10-03', name: '개천절', type: 'national' },
+          { date: '2027-10-09', name: '한글날', type: 'national' },
+          { date: '2027-12-25', name: '성탄절', type: 'national' },
+        ],
+        // 2028년
+        2028: [
+          { date: '2028-01-01', name: '신정', type: 'national' },
+          { date: '2028-01-25', name: '설날 연휴', type: 'national' },
+          { date: '2028-01-26', name: '설날', type: 'national' },
+          { date: '2028-01-27', name: '설날 연휴', type: 'national' },
+          { date: '2028-03-01', name: '삼일절', type: 'national' },
+          { date: '2028-05-01', name: '근로자의날', type: 'national' },
+          { date: '2028-05-05', name: '어린이날', type: 'national' },
+          { date: '2028-05-02', name: '부처님오신날', type: 'national' },
+          { date: '2028-06-06', name: '현충일', type: 'national' },
+          { date: '2028-08-15', name: '광복절', type: 'national' },
+          { date: '2028-10-03', name: '개천절', type: 'national' },
+          { date: '2028-10-09', name: '한글날', type: 'national' },
+          { date: '2028-12-25', name: '성탄절', type: 'national' },
+        ],
+        // 2029년
+        2029: [
+          { date: '2029-01-01', name: '신정', type: 'national' },
+          { date: '2029-02-12', name: '설날 연휴', type: 'national' },
+          { date: '2029-02-13', name: '설날', type: 'national' },
+          { date: '2029-02-14', name: '설날 연휴', type: 'national' },
+          { date: '2029-03-01', name: '삼일절', type: 'national' },
+          { date: '2029-05-01', name: '근로자의날', type: 'national' },
+          { date: '2029-05-05', name: '어린이날', type: 'national' },
+          { date: '2029-05-20', name: '부처님오신날', type: 'national' },
+          { date: '2029-06-06', name: '현충일', type: 'national' },
+          { date: '2029-08-15', name: '광복절', type: 'national' },
+          { date: '2029-09-21', name: '추석 연휴', type: 'national' },
+          { date: '2029-09-22', name: '추석', type: 'national' },
+          { date: '2029-09-23', name: '추석 연휴', type: 'national' },
+          { date: '2029-10-03', name: '개천절', type: 'national' },
+          { date: '2029-10-09', name: '한글날', type: 'national' },
+          { date: '2029-12-25', name: '성탄절', type: 'national' },
+        ],
+        // 2030년
+        2030: [
+          { date: '2030-01-01', name: '신정', type: 'national' },
+          { date: '2030-02-02', name: '설날 연휴', type: 'national' },
+          { date: '2030-02-03', name: '설날', type: 'national' },
+          { date: '2030-02-04', name: '설날 연휴', type: 'national' },
+          { date: '2030-03-01', name: '삼일절', type: 'national' },
+          { date: '2030-05-01', name: '근로자의날', type: 'national' },
+          { date: '2030-05-05', name: '어린이날', type: 'national' },
+          { date: '2030-05-09', name: '부처님오신날', type: 'national' },
+          { date: '2030-06-06', name: '현충일', type: 'national' },
+          { date: '2030-08-15', name: '광복절', type: 'national' },
+          { date: '2030-10-03', name: '개천절', type: 'national' },
+          { date: '2030-09-12', name: '추석 연휴', type: 'national' },
+          { date: '2030-09-13', name: '추석', type: 'national' },
+          { date: '2030-09-14', name: '추석 연휴', type: 'national' },
+          { date: '2030-10-09', name: '한글날', type: 'national' },
+          { date: '2030-12-25', name: '성탄절', type: 'national' },
+        ],
+      };
+
+      // Custom holidays storage (managed by admin)
+      let customHolidays = JSON.parse(localStorage.getItem('customHolidays') || '[]');
+
+      // Function to get all holidays for a year
+      function getAllHolidays(year) {
+        const nationalHolidays = KOREAN_HOLIDAYS[year] || [];
+        const custom = customHolidays.filter((h) => h.date.startsWith(year.toString()));
+        return [...nationalHolidays, ...custom];
+      }
+
+      // Function to add custom holiday
+      function addCustomHoliday(date, name, type = 'company') {
+        const holiday = { date, name, type };
+        customHolidays.push(holiday);
+        localStorage.setItem('customHolidays', JSON.stringify(customHolidays));
+        return holiday;
+      }
+
+      // Function to remove custom holiday
+      function removeCustomHoliday(date) {
+        customHolidays = customHolidays.filter((h) => h.date !== date);
+        localStorage.setItem('customHolidays', JSON.stringify(customHolidays));
+      }
 
       const AppState = {
         get db() {
@@ -5080,6 +5109,119 @@
         });
       }
 
+      // --- Holidays Management ---
+      function renderHolidaysManagement() {
+        const container = document.getElementById('adminHolidaysTab');
+        const currentYear = new Date().getFullYear();
+        const nationalHolidays = KOREAN_HOLIDAYS[currentYear] || [];
+
+        container.innerHTML = `
+          <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">공휴일 관리</h4>
+
+          <div class="mb-6">
+            <h5 class="text-md font-semibold mb-3 text-gray-700 dark:text-gray-300">${currentYear}년 공휴일 목록</h5>
+            <div class="bg-gray-50 dark:bg-slate-800 rounded-lg p-4 max-h-60 overflow-y-auto">
+              ${nationalHolidays.map(h => `
+                <div class="flex justify-between items-center py-2 border-b border-gray-200 dark:border-slate-700 last:border-0">
+                  <div>
+                    <span class="inline-block w-3 h-3 rounded-full mr-2" style="background-color: ${h.type === 'national' ? '#dc2626' : '#f59e0b'}"></span>
+                    <span class="font-medium">${h.name}</span>
+                    <span class="text-sm text-gray-500 ml-2">${h.date}</span>
+                  </div>
+                  <span class="text-xs px-2 py-1 rounded" style="background-color: ${h.type === 'national' ? '#fecaca' : '#fde68a'}; color: ${h.type === 'national' ? '#991b1b' : '#92400e'}">
+                    ${h.type === 'national' ? '국가공휴일' : '기업휴일'}
+                  </span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h5 class="text-md font-semibold mb-3 text-gray-700 dark:text-gray-300">추가 공휴일 등록</h5>
+            <div class="flex gap-2 mb-3">
+              <input type="date" id="customHolidayDate" class="form-input flex-1">
+              <input type="text" id="customHolidayName" placeholder="공휴일 이름" class="form-input flex-1">
+              <select id="customHolidayType" class="form-select w-32">
+                <option value="company">기업휴일</option>
+                <option value="national">국가공휴일</option>
+              </select>
+              <button id="addCustomHolidayButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg interactive-button">
+                <i class="fas fa-plus"></i> 추가
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="text-md font-semibold mb-3 text-gray-700 dark:text-gray-300">등록된 추가 공휴일</h5>
+            <div id="customHolidaysList" class="space-y-2">
+              ${customHolidays.length === 0 ? '<p class="text-gray-500 text-sm">등록된 추가 공휴일이 없습니다.</p>' : ''}
+              ${customHolidays.map(h => `
+                <div class="flex justify-between items-center bg-gray-50 dark:bg-slate-800 p-3 rounded-lg" data-date="${h.date}">
+                  <div>
+                    <span class="inline-block w-3 h-3 rounded-full mr-2" style="background-color: ${h.type === 'national' ? '#dc2626' : '#f59e0b'}"></span>
+                    <span class="font-medium">${h.name}</span>
+                    <span class="text-sm text-gray-500 ml-2">${h.date}</span>
+                  </div>
+                  <button class="delete-custom-holiday text-red-500 hover:text-red-700 p-1" data-date="${h.date}">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 bg-blue-50 dark:bg-slate-800 rounded-lg">
+            <p class="text-sm text-blue-800 dark:text-blue-300">
+              <i class="fas fa-info-circle mr-2"></i>
+              공휴일은 달력에 표시되며, 지원 일정 계획 시 참고할 수 있습니다.
+              국가공휴일은 빨간색으로, 기업휴일은 주황색으로 표시됩니다.
+            </p>
+          </div>
+        `;
+
+        // Add custom holiday
+        container.querySelector('#addCustomHolidayButton').addEventListener('click', () => {
+          const date = container.querySelector('#customHolidayDate').value;
+          const name = container.querySelector('#customHolidayName').value.trim();
+          const type = container.querySelector('#customHolidayType').value;
+
+          if (!date || !name) {
+            showToast('error', '날짜와 이름을 모두 입력해주세요.');
+            return;
+          }
+
+          // Check if date already exists
+          if (customHolidays.some(h => h.date === date)) {
+            showToast('error', '이미 등록된 날짜입니다.');
+            return;
+          }
+
+          addCustomHoliday(date, name, type);
+          showToast('success', '공휴일이 등록되었습니다.');
+          renderHolidaysManagement();
+
+          // Refresh calendar if visible
+          if (calendar) {
+            updateCalendarEvents();
+          }
+        });
+
+        // Delete custom holiday
+        container.querySelectorAll('.delete-custom-holiday').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const date = e.currentTarget.dataset.date;
+            removeCustomHoliday(date);
+            showToast('success', '공휴일이 삭제되었습니다.');
+            renderHolidaysManagement();
+
+            // Refresh calendar if visible
+            if (calendar) {
+              updateCalendarEvents();
+            }
+          });
+        });
+      }
+
       // --- Modal & Utility Functions ---
       function closeFullCalendarPopovers() {
         if (calendar) {
@@ -5443,26 +5585,37 @@
           return event;
         });
 
-        calendar.getEventSources().forEach((source) => {
-          source.remove();
-        });
-        calendar.addEventSource(calendarEvents);
-
-        // Add Korean holidays - show as text, not background
+        // Add Korean holidays to calendar
         const currentYear = new Date().getFullYear();
         const holidays = getAllHolidays(currentYear);
         const holidayEvents = holidays.map((holiday) => ({
           title: holiday.name,
           start: holiday.date,
           allDay: true,
-          backgroundColor: 'transparent',
-          borderColor: 'transparent',
-          textColor: '#dc2626',
-          extendedProps: { ...holiday, isHoliday: true },
-          display: 'list-item',
-          classNames: ['holiday-event'],
+          backgroundColor: holiday.type === 'national' ? '#dc2626' : '#f59e0b',
+          borderColor: holiday.type === 'national' ? '#dc2626' : '#f59e0b',
+          textColor: '#ffffff',
+          extendedProps: {
+            ...holiday,
+            isHoliday: true,
+          },
+          display: 'background',
         }));
+
+        calendar.getEventSources().forEach((source) => {
+          source.remove();
+        });
+        calendar.addEventSource(calendarEvents);
         calendar.addEventSource(holidayEvents);
+      }
+
+          return event;
+        });
+
+        calendar.getEventSources().forEach((source) => {
+          source.remove();
+        });
+        calendar.addEventSource(calendarEvents);
       }
 
       function getEventColor(supportType) {
